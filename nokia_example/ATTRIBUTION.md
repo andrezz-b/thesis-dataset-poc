@@ -1,0 +1,33 @@
+# Image attribution
+
+All images are from Wikimedia Commons (via Wikidata P18), downscaled to 512px width. Each keeps its own licence.
+
+| Entity | Commons file | Author | Licence |
+|---|---|---|---|
+| Samsung SGH-X480 (Q10366521) | [Samsung SGH-X480.jpg](https://commons.wikimedia.org/wiki/File:Samsung_SGH-X480.jpg) | Oxiq | CC BY-SA 4.0 |
+| Nokia 7250 (Q1038484) | [Nokia 7250i (763025390).png](https://commons.wikimedia.org/wiki/File:Nokia_7250i_(763025390).png) | clive darr from UK | CC BY-SA 2.0 |
+| Sony Ericsson K510i (Q1049763) | [Sony Ericcson K510i.jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericcson_K510i.jpg) | MARCIN N | CC BY 2.0 |
+| LG u300 (Q10552295) | [Öppen.JPG](https://commons.wikimedia.org/wiki/File:%C3%96ppen.JPG) | Sakartvelo | Public domain |
+| Samsung Galaxy A32 (Q106311190) | [Samsung-Galaxy-A32-2021.jpg](https://commons.wikimedia.org/wiki/File:Samsung-Galaxy-A32-2021.jpg) | OnoMaker 12345 | CC BY-SA 4.0 |
+| Sagem myX-6 (Q10660048) | [Sagem myx-6.JPG](https://commons.wikimedia.org/wiki/File:Sagem_myx-6.JPG) | User:Thelb4 | Public domain |
+| Sony Ericsson C702 (Q10673758) | [Sony Ericsson C702.JPG](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_C702.JPG) | GM Red Wing | CC BY 3.0 |
+| Sony Ericsson Z770i (Q10673761) | [Sony Ericsson Z770i panel.jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_Z770i_panel.jpg) | Solomon203 | CC BY-SA 3.0 |
+| Nokia 5210 (Q1072815) | [Nokia 5210.jpg](https://commons.wikimedia.org/wiki/File:Nokia_5210.jpg) | Aladdin80 at English Wikipedia | Public domain |
+| Nokia 150 (Q107404036) | [Nokia 150 (2020).png](https://commons.wikimedia.org/wiki/File:Nokia_150_(2020).png) | AnVuong1222004 (2) | CC BY-SA 4.0 |
+| Sony Ericsson K310i (Q1076838) | [Sony-ericsson-k310.jpg](https://commons.wikimedia.org/wiki/File:Sony-ericsson-k310.jpg) | T3rror inc at English Wikipedia | Public domain |
+| Nokia XR20 (Q107751489) | [Nokia XR20-front illuminated PNr°1007.jpg](https://commons.wikimedia.org/wiki/File:Nokia_XR20-front_illuminated_PNr%C2%B01007.jpg) | D-Kuru | CC BY-SA 4.0 |
+| Sony Ericsson W705 (Q10852629) | [Sony Ericsson W705.jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_W705.jpg) | 子房 | CC BY-SA 3.0 |
+| Sony Ericsson Z558i (Q10852633) | [Sony Ericsson Z558c (Espresso Black) - Front (Open).jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_Z558c_(Espresso_Black)_-_Front_(Open).jpg) | Beamish4 | CC BY-SA 4.0 |
+| Samsung SGH-T100 (Q10861178) | [Samsung SGH-T100 (1).png](https://commons.wikimedia.org/wiki/File:Samsung_SGH-T100_(1).png) | AnVuong1222004 | CC BY-SA 4.0 |
+| Samsung SCH-R810 (Q10861184) | [Samsungfinesse.jpg](https://commons.wikimedia.org/wiki/File:Samsungfinesse.jpg) | Drdak | CC BY-SA 3.0 |
+| Zylo (Q10863658) | [Sony Ericsson W20 Zylo.jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_W20_Zylo.jpg) | Mk2010 | CC BY-SA 4.0 |
+| Sony Ericsson W300i (Q1088219) | [W300i TIM.JPG](https://commons.wikimedia.org/wiki/File:W300i_TIM.JPG) | FENIX 89 | CC BY-SA 3.0 |
+| Sony Ericsson K550i (Q1097342) | [Sony Ericsson K550.jpg](https://commons.wikimedia.org/wiki/File:Sony_Ericsson_K550.jpg) | YO Pictureve | CC BY-SA 2.0 |
+| Mango (Q111336617) | [MangoPhone.jpg](https://commons.wikimedia.org/wiki/File:MangoPhone.jpg) | ALPR | CC BY-SA 4.0 |
+| Casio A3012CA (Q11188665) | [Au A3012CA.jpg](https://commons.wikimedia.org/wiki/File:Au_A3012CA.jpg) | machiro | CC BY-SA 3.0 |
+| Casio A5401CA (Q11188676) | [A5401CA.jpg](https://commons.wikimedia.org/wiki/File:A5401CA.jpg) | Sug | CC BY-SA 3.0 |
+| Casio A5403CA (Q11188678) | [Au A5403CA.png](https://commons.wikimedia.org/wiki/File:Au_A5403CA.png) | unknown | Public domain |
+| Casio A5406CA (Q11188682) | [Au a5406ca 2.jpg](https://commons.wikimedia.org/wiki/File:Au_a5406ca_2.jpg) | Sug | CC BY-SA 3.0 |
+| biblio (Q11192346) | [Au biblio.jpg](https://commons.wikimedia.org/wiki/File:Au_biblio.jpg) | Motoki-jj | CC0 |
+| Nokia 3310 (index) (Q219691) | [Nokia 3310 Blue R7309170 (retouch).png](https://commons.wikimedia.org/wiki/File:Nokia_3310_Blue_R7309170_(retouch).png) | smial (talk) | FAL |
+| Nokia 3310 (query image) (Q219691) | [Nokia 3310 blue.jpg](https://commons.wikimedia.org/wiki/File:Nokia_3310_blue.jpg) | Michael Brandtner | Public domain |

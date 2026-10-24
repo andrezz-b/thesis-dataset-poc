@@ -1,0 +1,35 @@
+{
+  "head": {
+    "vars": [
+      "manufacturer",
+      "manufacturerLabel",
+      "inception",
+      "inceptionYear"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "manufacturer": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1418"
+        },
+        "inception": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "literal",
+          "value": "1865-05-12T00:00:00Z"
+        },
+        "manufacturerLabel": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Nokia"
+        },
+        "inceptionYear": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "type": "literal",
+          "value": "1865"
+        }
+      }
+    ]
+  }
+}

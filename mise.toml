@@ -1,0 +1,19 @@
+[tools]
+node = "24"
+"npm:wikibase-cli" = { version = "latest", allow_low_downloads = true }
+
+[env]
+WB_INSTANCE = "https://www.wikidata.org"
+WB_LANG = "en"
+
+[tasks."vector:up"]
+description = "Start the Qdrant vector DB (docker)"
+run = "vector_index/up.sh"
+
+[tasks."vector:down"]
+description = "Stop the Qdrant vector DB (data kept in the docker volume)"
+run = "docker compose -f vector_index/docker-compose.yml down"
+
+[tasks."vector:reset"]
+description = "Stop Qdrant and delete all indexed data"
+run = "docker compose -f vector_index/docker-compose.yml down -v"
