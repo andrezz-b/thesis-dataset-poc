@@ -58,7 +58,7 @@ The 3310 gets an additional entry in the index (it is not in the first 25 by QID
 
 * **Vector DB: Qdrant** (docker, `vector_index/docker-compose.yml`). Small, one container, cosine HNSW index,
   stores arbitrary JSON payload next to each vector, has a dashboard at <http://localhost:6333/dashboard>.
-  Point id = Wikidata numeric id, payload = the entity facts (label, manufacturer, inception year, image).
+  Point id = Wikidata numeric id, payload = `{ qid, label, image }`.
   Alternatives if you later want real graph traversal next to vectors: **Neo4j 5** (native vector index +
   Cypher) or **Weaviate**/**pgvector**; only `vector_index/qdrant.js` would need replacing.
 * **Embedding model: CLIP ViT-B/32** (`Xenova/clip-vit-base-patch32`, 512-d, ~90 MB ONNX, runs on CPU in Node via
@@ -87,15 +87,15 @@ Result (`node 06_query.js query/nokia_3310_blue.jpg 5 --md`, 26 indexed entities
 
 <img src="query/nokia_3310_blue.jpg" height="200">
 
-| # | Image | Entity | Score | Manufacturer | Founded |
-|---|---|---|---|---|---|
-| 1 | <img src="images/Q219691_Nokia_3310_Blue_R7309170_(retouch).png" height="100"> | **Nokia 3310** ([Q219691](https://www.wikidata.org/wiki/Q219691)) | 0.8596 | Nokia ([Q1418](https://www.wikidata.org/wiki/Q1418)) | 1865 |
-| 2 | <img src="images/Q10366521_Samsung_SGH-X480.jpg" height="100"> | **Samsung SGH-X480** ([Q10366521](https://www.wikidata.org/wiki/Q10366521)) | 0.7369 | Samsung Electronics ([Q20718](https://www.wikidata.org/wiki/Q20718)) | 1969 |
-| 3 | <img src="images/Q1076838_Sony-ericsson-k310.jpg" height="100"> | **Sony Ericsson K310i** ([Q1076838](https://www.wikidata.org/wiki/Q1076838)) | 0.7184 | Sony Mobile Communications ([Q376692](https://www.wikidata.org/wiki/Q376692)) | 2001 |
-| 4 | <img src="images/Q10660048_Sagem_myx-6.JPG" height="100"> | **Sagem myX-6** ([Q10660048](https://www.wikidata.org/wiki/Q10660048)) | 0.7100 | SAGEM ([Q1347160](https://www.wikidata.org/wiki/Q1347160)) | 1925 |
-| 5 | <img src="images/Q11188678_Au_A5403CA.png" height="100"> | **Casio A5403CA** ([Q11188678](https://www.wikidata.org/wiki/Q11188678)) | 0.7073 | Casio ([Q217338](https://www.wikidata.org/wiki/Q217338)) | 1957 |
+| # | Image | Entity | Score |
+|---|---|---|---|
+| 1 | <img src="images/Q219691_Nokia_3310_Blue_R7309170_(retouch).png" height="100"> | **Nokia 3310** ([Q219691](https://www.wikidata.org/wiki/Q219691)) | 0.8596 |
+| 2 | <img src="images/Q10366521_Samsung_SGH-X480.jpg" height="100"> | **Samsung SGH-X480** ([Q10366521](https://www.wikidata.org/wiki/Q10366521)) | 0.7369 |
+| 3 | <img src="images/Q1076838_Sony-ericsson-k310.jpg" height="100"> | **Sony Ericsson K310i** ([Q1076838](https://www.wikidata.org/wiki/Q1076838)) | 0.7184 |
+| 4 | <img src="images/Q10660048_Sagem_myx-6.JPG" height="100"> | **Sagem myX-6** ([Q10660048](https://www.wikidata.org/wiki/Q10660048)) | 0.7100 |
+| 5 | <img src="images/Q11188678_Au_A5403CA.png" height="100"> | **Casio A5403CA** ([Q11188678](https://www.wikidata.org/wiki/Q11188678)) | 0.7073 |
 
-Top-1 is the correct entity (a different photo of the same phone) and its payload carries the answer to the question: **1865**.
+Top-1 is the correct entity (a different photo of the same phone).
 Plain-text output: omit `--md`.
 
 ## Images & licences

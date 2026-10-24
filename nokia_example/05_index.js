@@ -26,7 +26,6 @@ await recreateCollection(name, embedder.dim)
 await upsert(name, present.map((it, i) => ({
   id: Number(it.phone.slice(1)),           // Wikidata Q-number as point id
   vector: vectors[i],
-  payload: { qid: it.phone, label: it.phoneLabel, manufacturer: it.manufacturer, manufacturerLabel: it.manufacturerLabel,
-             inceptionYear: it.answer, question: it.question, image: it.file },
+  payload: { qid: it.phone, label: it.phoneLabel, image: it.file },
 })))
 console.log(`indexed ${present.length} points into "${name}" using ${embedder.name}`)

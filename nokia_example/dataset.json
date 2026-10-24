@@ -19,7 +19,9 @@
     "manufacturerLabel": "Nokia",
     "answer": 1865,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q1038484_Nokia_7250i_(763025390).png"
+    "file": "images/Q1038484_Nokia_7250i_(763025390).png",
+    "bytes": 419952,
+    "format": "png"
   },
   {
     "phone": "Q1049763",
@@ -41,7 +43,9 @@
     "manufacturerLabel": "LG Electronics",
     "answer": 1958,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10552295__ppen.JPG"
+    "file": "images/Q10552295__ppen.JPG",
+    "bytes": 332214,
+    "format": "jpg"
   },
   {
     "phone": "Q106311190",
@@ -51,7 +55,9 @@
     "manufacturerLabel": "Samsung Group",
     "answer": 1938,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q106311190_Samsung-Galaxy-A32-2021.jpg"
+    "file": "images/Q106311190_Samsung-Galaxy-A32-2021.jpg",
+    "bytes": 7637,
+    "format": "jpg"
   },
   {
     "phone": "Q10660048",
@@ -61,7 +67,9 @@
     "manufacturerLabel": "SAGEM",
     "answer": 1925,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10660048_Sagem_myx-6.JPG"
+    "file": "images/Q10660048_Sagem_myx-6.JPG",
+    "bytes": 91529,
+    "format": "jpg"
   },
   {
     "phone": "Q10673758",
@@ -71,7 +79,9 @@
     "manufacturerLabel": "Sony Group",
     "answer": 1946,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10673758_Sony_Ericsson_C702.JPG"
+    "file": "images/Q10673758_Sony_Ericsson_C702.JPG",
+    "bytes": 212815,
+    "format": "jpg"
   },
   {
     "phone": "Q10673761",
@@ -81,7 +91,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10673761_Sony_Ericsson_Z770i_panel.jpg"
+    "file": "images/Q10673761_Sony_Ericsson_Z770i_panel.jpg",
+    "bytes": 394254,
+    "format": "jpg"
   },
   {
     "phone": "Q1072815",
@@ -91,7 +103,9 @@
     "manufacturerLabel": "Nokia",
     "answer": 1865,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q1072815_Nokia_5210.jpg"
+    "file": "images/Q1072815_Nokia_5210.jpg",
+    "bytes": 183735,
+    "format": "jpg"
   },
   {
     "phone": "Q107404036",
@@ -113,7 +127,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q1076838_Sony-ericsson-k310.jpg"
+    "file": "images/Q1076838_Sony-ericsson-k310.jpg",
+    "bytes": 141637,
+    "format": "jpg"
   },
   {
     "phone": "Q107751489",
@@ -123,7 +139,9 @@
     "manufacturerLabel": "HMD Global",
     "answer": 2015,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q107751489_Nokia_XR20-front_illuminated_PNr_1007.jpg"
+    "file": "images/Q107751489_Nokia_XR20-front_illuminated_PNr_1007.jpg",
+    "bytes": 89261,
+    "format": "jpg"
   },
   {
     "phone": "Q10852629",
@@ -133,7 +151,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10852629_Sony_Ericsson_W705.jpg"
+    "file": "images/Q10852629_Sony_Ericsson_W705.jpg",
+    "bytes": 302458,
+    "format": "jpg"
   },
   {
     "phone": "Q10852633",
@@ -143,7 +163,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10852633_Sony_Ericsson_Z558c_(Espresso_Black)_-_Front_(Open).jpg"
+    "file": "images/Q10852633_Sony_Ericsson_Z558c_(Espresso_Black)_-_Front_(Open).jpg",
+    "bytes": 309705,
+    "format": "jpg"
   },
   {
     "phone": "Q10861178",
@@ -165,7 +187,9 @@
     "manufacturerLabel": "Samsung Electronics",
     "answer": 1969,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10861184_Samsungfinesse.jpg"
+    "file": "images/Q10861184_Samsungfinesse.jpg",
+    "bytes": 46871,
+    "format": "jpg"
   },
   {
     "phone": "Q10863658",
@@ -175,7 +199,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q10863658_Sony_Ericsson_W20_Zylo.jpg"
+    "file": "images/Q10863658_Sony_Ericsson_W20_Zylo.jpg",
+    "bytes": 269246,
+    "format": "jpg"
   },
   {
     "phone": "Q1088219",
@@ -185,7 +211,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q1088219_W300i_TIM.JPG"
+    "file": "images/Q1088219_W300i_TIM.JPG",
+    "bytes": 122527,
+    "format": "jpg"
   },
   {
     "phone": "Q1097342",
@@ -195,7 +223,9 @@
     "manufacturerLabel": "Sony Mobile Communications",
     "answer": 2001,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q1097342_Sony_Ericsson_K550.jpg"
+    "file": "images/Q1097342_Sony_Ericsson_K550.jpg",
+    "bytes": 86933,
+    "format": "jpg"
   },
   {
     "phone": "Q111336617",
@@ -205,7 +235,9 @@
     "manufacturerLabel": "Q259011",
     "answer": 1928,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q111336617_MangoPhone.jpg"
+    "file": "images/Q111336617_MangoPhone.jpg",
+    "bytes": 110425,
+    "format": "jpg"
   },
   {
     "phone": "Q11188665",
@@ -215,7 +247,9 @@
     "manufacturerLabel": "Casio",
     "answer": 1957,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q11188665_Au_A3012CA.jpg"
+    "file": "images/Q11188665_Au_A3012CA.jpg",
+    "bytes": 125308,
+    "format": "jpg"
   },
   {
     "phone": "Q11188676",
@@ -225,7 +259,9 @@
     "manufacturerLabel": "Casio",
     "answer": 1957,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q11188676_A5401CA.jpg"
+    "file": "images/Q11188676_A5401CA.jpg",
+    "bytes": 80422,
+    "format": "jpg"
   },
   {
     "phone": "Q11188678",
@@ -235,7 +271,9 @@
     "manufacturerLabel": "Casio",
     "answer": 1957,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q11188678_Au_A5403CA.png"
+    "file": "images/Q11188678_Au_A5403CA.png",
+    "bytes": 523388,
+    "format": "png"
   },
   {
     "phone": "Q11188682",
@@ -245,7 +283,9 @@
     "manufacturerLabel": "Casio",
     "answer": 1957,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q11188682_Au_a5406ca_2.jpg"
+    "file": "images/Q11188682_Au_a5406ca_2.jpg",
+    "bytes": 172186,
+    "format": "jpg"
   },
   {
     "phone": "Q11192346",
@@ -255,6 +295,8 @@
     "manufacturerLabel": "Toshiba",
     "answer": 1875,
     "question": "In which year was this phone's manufacturer founded?",
-    "file": "images/Q11192346_Au_biblio.jpg"
+    "file": "images/Q11192346_Au_biblio.jpg",
+    "bytes": 120549,
+    "format": "jpg"
   }
 ]

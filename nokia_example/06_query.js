@@ -13,16 +13,15 @@ const wd = id => `https://www.wikidata.org/wiki/${id}`
 
 if (md) {
   console.log(`**Query image** (\`${imagePath}\`):\n\n<img src="${imagePath}" height="200">\n`)
-  console.log('| # | Image | Entity | Score | Manufacturer | Founded |\n|---|---|---|---|---|---|')
+  console.log('| # | Image | Entity | Score |\n|---|---|---|---|')
   hits.forEach((h, i) => {
     const p = h.payload
-    console.log(`| ${i + 1} | <img src="${encodeURI(p.image)}" height="100"> | **${p.label}** ([${p.qid}](${wd(p.qid)})) | ${h.score.toFixed(4)} | ${p.manufacturerLabel} ([${p.manufacturer}](${wd(p.manufacturer)})) | ${p.inceptionYear} |`)
+    console.log(`| ${i + 1} | <img src="${encodeURI(p.image)}" height="100"> | **${p.label}** ([${p.qid}](${wd(p.qid)})) | ${h.score.toFixed(4)} |`)
   })
 } else {
   console.log(`Query: ${imagePath}  (embedder: ${embedder.name})\n`)
   hits.forEach((h, i) => {
     const p = h.payload
     console.log(`${i + 1}. ${p.label} (${p.qid})  score=${h.score.toFixed(4)}`)
-    console.log(`   manufacturer: ${p.manufacturerLabel} (${p.manufacturer})  founded: ${p.inceptionYear}`)
   })
 }
