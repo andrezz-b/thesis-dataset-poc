@@ -6,8 +6,6 @@ Each sample is an **image of an entity** plus a **question answered by walking t
 |---|---|---|---|
 | Nokia 3310 (Q219691) | In which year was this phone's manufacturer founded? | `manufacturer (P176) → inception (P571)` | **1865** (Nokia, Q1418) |
 
-Everything is JavaScript (Node 24, `wikibase-sdk`); no Python.
-
 ## Layout
 
 ```
@@ -42,11 +40,6 @@ The 3310 has two P18 images; the **preferred-rank** one (`Nokia 3310 Blue R73091
 `wbk.getImageUrl(file)` yields the `Special:FilePath` URL.
 
 ## Step 3 – Expansion (`03_expand.js`)
-
-**Correction to the LLM-suggested query:** it filtered on `P31/P279* wd:Q17517` (mobile phone). On real
-Wikidata this returned only **3** rows, because individual phone models such as the Nokia 3310 are
-`instance of` **Q19723444 "cell phone model"**, not of Q17517. The script uses
-`?phone wdt:P31 wd:Q19723444` instead: 582 phones have an image + manufacturer + manufacturer inception.
 
 Post-processing in JS: group by phone, drop phones with several manufacturers/inception values or several
 images (ambiguous answer), drop unlabeled items, keep the first 25 by QID → `dataset.json`
