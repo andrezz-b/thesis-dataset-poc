@@ -59,3 +59,42 @@ Top-5 of 26 indexed entities (embedder: `Xenova/clip-vit-base-patch32`). Expecte
 | 5 | <img src="examples/nokia/images/Q11188678_Au_A5403CA.png" height="100"> | **Casio A5403CA** ([Q11188678](https://www.wikidata.org/wiki/Q11188678)) | 0.7073 |
 
 ➡️ Full write-up: [examples/nokia/README.md](examples/nokia/README.md)
+
+### IBM ThinkPad Manufacturer Inception Example
+
+Determine the laptop entity from a photo of a laptop model, then follow `manufacturer (P176) → inception (P571)` in Wikidata to answer in which year the laptop's manufacturer was established.
+
+- **Question:** In which year was the manufacturer of this laptop established?
+- **Gold entity:** [Q106942963](https://www.wikidata.org/wiki/Q106942963)
+
+<details><summary>Gold query</summary>
+
+```sparql
+SELECT ?manufacturer ?manufacturerLabel ?inception ?inceptionYear WHERE {
+  BIND(wd:Q106942963 AS ?product)
+  ?product wdt:P176 ?manufacturer .
+  ?manufacturer wdt:P571 ?inception .
+  BIND(YEAR(?inception) AS ?inceptionYear)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+</details>
+
+#### End-to-end result
+
+**Query image** (`query/thinkpad_701_butterfly.jpg`):
+
+<img src="examples/thinkpad/query/thinkpad_701_butterfly.jpg" height="200">
+
+Top-5 of 26 indexed entities (embedder: `Xenova/clip-vit-base-patch32`). Expected entity **Q106942963** is at rank **1**.
+
+| # | Image | Entity | Score |
+|---|---|---|---|
+| 1 | <img src="examples/thinkpad/images/Q106942963_Thinkpad_701.jpg" height="100"> | ✅ **IBM ThinkPad 701** ([Q106942963](https://www.wikidata.org/wiki/Q106942963)) | 0.8483 |
+| 2 | <img src="examples/thinkpad/images/Q11251024_ThinkPad_560E.jpg" height="100"> | **IBM ThinkPad 560** ([Q11251024](https://www.wikidata.org/wiki/Q11251024)) | 0.8198 |
+| 3 | <img src="examples/thinkpad/images/Q11195843_DEC_HiNote_Ultra_CS450__picture_2.jpg" height="100"> | **Digital HiNote** ([Q11195843](https://www.wikidata.org/wiki/Q11195843)) | 0.7975 |
+| 4 | <img src="examples/thinkpad/images/Q115614795_Zenith_supersPORT_(1).jpg" height="100"> | **Zenith SupersPort** ([Q115614795](https://www.wikidata.org/wiki/Q115614795)) | 0.7953 |
+| 5 | <img src="examples/thinkpad/images/Q109967280_ThinkPad_T42.jpg" height="100"> | **IBM ThinkPad T42** ([Q109967280](https://www.wikidata.org/wiki/Q109967280)) | 0.7917 |
+
+➡️ Full write-up: [examples/thinkpad/README.md](examples/thinkpad/README.md)
