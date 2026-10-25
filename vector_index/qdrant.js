@@ -1,10 +1,11 @@
-// Thin Qdrant wrapper, reusable across examples. One collection per (example, embedder).
+// Thin Qdrant wrapper, reusable across examples. One collection per (exampleId, embedder).
 import { QdrantClient } from '@qdrant/js-client-rest'
+import { config } from '../config.js'
 
-export const client = new QdrantClient({ url: process.env.QDRANT_URL ?? 'http://localhost:6333' })
+export const client = new QdrantClient({ url: config.qdrantUrl })
 
-export const collectionName = (example, embedder) =>
-  `${example}__${embedder.name.replace(/[^\w]+/g, '_')}`
+export const collectionName = (exampleId, embedder) =>
+  `${exampleId}__${embedder.name.replace(/[^\w]+/g, '_')}`
 
 export async function recreateCollection(name, dim) {
   if ((await client.getCollections()).collections.some(c => c.name === name)) await client.deleteCollection(name)

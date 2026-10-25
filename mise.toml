@@ -2,9 +2,19 @@
 node = "24"
 "npm:wikibase-cli" = { version = "latest", allow_low_downloads = true }
 
+# Configuration read by config.js (all optional; these are the defaults).
 [env]
 WB_INSTANCE = "https://www.wikidata.org"
-WB_LANG = "en"
+WB_LANG = "en"                       # used by the wd CLI
+SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
+USER_AGENT = "VisualGraphQA-POC/1.0 (thesis proof of concept)"
+IMAGE_COUNT = "25"                   # distractor entities per example; IMAGE_COUNT_<ID> overrides one example
+IMAGE_WIDTH = "512"                  # Commons thumbnail width
+DOWNLOAD_DELAY_MS = "1500"
+DOWNLOAD_MAX_ATTEMPTS = "8"
+EMBEDDER = "clip-b32"
+QDRANT_URL = "http://localhost:6333"
+TOP_K = "5"
 
 [tasks."vector:up"]
 description = "Start the Qdrant vector DB (docker)"
@@ -17,3 +27,41 @@ run = "docker compose -f vector_index/docker-compose.yml down"
 [tasks."vector:reset"]
 description = "Stop Qdrant and delete all indexed data"
 run = "docker compose -f vector_index/docker-compose.yml down -v"
+
+[tasks.install]
+description = "Install npm dependencies"
+run = "npm install"
+
+[tasks.examples]
+description = "List available examples"
+run = "node cli.js list"
+
+[tasks.build]
+description = "Entities, gold query check, images and attribution (example id or all; --refresh re-runs SPARQL)"
+usage = 'arg "[example]" default="--all" help="Example id (default: all)"; flag "--refresh" help="Re-run the SPARQL expansion"'
+run = 'node cli.js build ${usage_example} ${usage_refresh:+--refresh}'
+
+[tasks.index]
+description = "Embed images and upsert them into Qdrant (needs vector:up)"
+usage = 'arg "[example]" default="--all" help="Example id (default: all)"'
+run = 'node cli.js index ${usage_example}'
+
+[tasks.e2e]
+description = "Run the query image against the index and store dist/e2e.json"
+usage = 'arg "[example]" default="--all" help="Example id (default: all)"'
+run = 'node cli.js e2e ${usage_example}'
+
+[tasks.query]
+description = "Image -> top-k entities for one example"
+usage = 'arg "<example>" help="Example id"; arg "<image>" help="Path to the query image"; flag "--k <k>" help="Number of results"'
+run = 'node cli.js query ${usage_example} ${usage_image} ${usage_k:+--k ${usage_k}}'
+
+[tasks.docs]
+description = "Regenerate README.md, ATTRIBUTION.md and the e2e block of each example README"
+run = "node cli.js docs"
+
+[tasks.all]
+description = "build + index + e2e for the example (default: all), then docs"
+depends = ["vector:up"]
+usage = 'arg "[example]" default="--all" help="Example id (default: all)"; flag "--refresh" help="Re-run the SPARQL expansion"'
+run = 'node cli.js all ${usage_example} ${usage_refresh:+--refresh}'
