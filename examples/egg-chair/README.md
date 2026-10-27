@@ -52,6 +52,10 @@ by QID, plus the gold entity (26 entities by default). Ground truth (`designer`,
 - The gold's English label is just "Egg".
 - Other Arne Jacobsen chairs (Swan, Ant) are among the distractors and share the same answer; they are also visually
   close to the Egg chair, and the Egg chair does not rank first for the query image (see below).
+- The Egg chair ranks 7th of 26 in the PoC e2e run because distractors are limited to items with `P279` chair (Q15026)
+  and several are visually similar Jacobsen chairs (Swan, Ant). If this query is used beyond the PoC, use broader chair
+  distractors (other chair classes/subclasses, more generic chairs, not only direct `P279` chair) and likely more
+  generic chair images.
 
 ## End-to-end result
 
