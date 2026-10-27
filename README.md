@@ -21,6 +21,85 @@ Image authors and licences: [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Examples
 
+### Egg Chair Designer Birth Year Example
+
+Determine the chair entity from a photo of a chair, then follow `designed by (P287) → date of birth (P569)` in Wikidata to answer in which year the chair's designer was born.
+
+- **Question:** In which year was the designer of this chair born?
+- **Gold entity:** [Q1301042](https://www.wikidata.org/wiki/Q1301042)
+
+<details><summary>Gold query</summary>
+
+```sparql
+SELECT ?designer ?designerLabel ?birth ?birthYear WHERE {
+  BIND(wd:Q1301042 AS ?chair)
+  ?chair wdt:P287 ?designer .
+  ?designer wdt:P569 ?birth .
+  BIND(YEAR(?birth) AS ?birthYear)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+</details>
+
+#### End-to-end result
+
+**Query image** (`query/egg_chair_1958.jpg`):
+
+<img src="examples/egg-chair/query/egg_chair_1958.jpg" height="200">
+
+Top-5 of 26 indexed entities (embedder: `Xenova/clip-vit-base-patch32`). Expected entity **Q1301042** is **not** in the top 5.
+
+| # | Image | Entity | Score |
+|---|---|---|---|
+| 1 | <img src="examples/egg-chair/images/Q133821854_Orange_Slice_Chair-Pierre_Paulin_IMG_5835-white.jpg" height="100"> | **Orange Slice chair** ([Q133821854](https://www.wikidata.org/wiki/Q133821854)) | 0.8614 |
+| 2 | <img src="examples/egg-chair/images/Q1290874_Ngv_design__arne_jacobsen__swan_chair__1958.JPG" height="100"> | **Swan** ([Q1290874](https://www.wikidata.org/wiki/Q1290874)) | 0.8367 |
+| 3 | <img src="examples/egg-chair/images/Q2038614_AJ_3101_ant.jpg" height="100"> | **Ant** ([Q2038614](https://www.wikidata.org/wiki/Q2038614)) | 0.8288 |
+| 4 | <img src="examples/egg-chair/images/Q134692936_Gerrit_rietveld__sedia_buegelstoel__1927_(1932)_01.jpg" height="100"> | **Tube-Framed Chair** ([Q134692936](https://www.wikidata.org/wiki/Q134692936)) | 0.8204 |
+| 5 | <img src="examples/egg-chair/images/Q2440033_The_Tongue_Chair.jpg" height="100"> | **Model 3102** ([Q2440033](https://www.wikidata.org/wiki/Q2440033)) | 0.8196 |
+
+➡️ Full write-up: [examples/egg-chair/README.md](examples/egg-chair/README.md)
+
+### Game Boy Founder Birth Year Example
+
+Determine the device entity from a photo of an electronic device model, then follow `manufacturer (P176) → founded by (P112) → date of birth (P569)` in Wikidata to answer in which year the founder of the console's manufacturer was born.
+
+- **Question:** In which year was the founder of this console's manufacturer born?
+- **Gold entity:** [Q186437](https://www.wikidata.org/wiki/Q186437)
+
+<details><summary>Gold query</summary>
+
+```sparql
+SELECT ?manufacturer ?manufacturerLabel ?founder ?founderLabel ?birth ?birthYear WHERE {
+  BIND(wd:Q186437 AS ?product)
+  ?product wdt:P176 ?manufacturer .
+  ?manufacturer wdt:P112 ?founder .
+  ?founder wdt:P569 ?birth .
+  BIND(YEAR(?birth) AS ?birthYear)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+</details>
+
+#### End-to-end result
+
+**Query image** (`query/game_boy_original.jpg`):
+
+<img src="examples/game-boy/query/game_boy_original.jpg" height="200">
+
+Top-5 of 26 indexed entities (embedder: `Xenova/clip-vit-base-patch32`). Expected entity **Q186437** is at rank **1**.
+
+| # | Image | Entity | Score |
+|---|---|---|---|
+| 1 | <img src="examples/game-boy/images/Q186437_Game-Boy-FL.jpg" height="100"> | ✅ **Game Boy** ([Q186437](https://www.wikidata.org/wiki/Q186437)) | 0.9347 |
+| 2 | <img src="examples/game-boy/images/Q170323_Nintendo-DS-Fat-Blue.jpg" height="100"> | **Nintendo DS** ([Q170323](https://www.wikidata.org/wiki/Q170323)) | 0.8550 |
+| 3 | <img src="examples/game-boy/images/Q183259_SNES-Mod1-Console-Set.jpg" height="100"> | **Super Nintendo Entertainment System** ([Q183259](https://www.wikidata.org/wiki/Q183259)) | 0.8309 |
+| 4 | <img src="examples/game-boy/images/Q182172_GameCube-Set.jpg" height="100"> | **Nintendo GameCube** ([Q182172](https://www.wikidata.org/wiki/Q182172)) | 0.8286 |
+| 5 | <img src="examples/game-boy/images/Q203597_Nintendo-3DS-AquaOpen.jpg" height="100"> | **Nintendo 3DS** ([Q203597](https://www.wikidata.org/wiki/Q203597)) | 0.8116 |
+
+➡️ Full write-up: [examples/game-boy/README.md](examples/game-boy/README.md)
+
 ### Nokia Manufacturer Inception Example
 
 Determine the phone entity from a photo of a cell phone model, then follow `manufacturer (P176) → inception (P571)` in Wikidata to answer in which year the phone's manufacturer was founded.
